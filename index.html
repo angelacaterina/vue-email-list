@@ -5,17 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>vue-email-list</title>
+  <!-- google fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <!-- Axios DCN -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    #app{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(248,242,237,1) 0%, rgba(235,217,199,1) 30%, rgba(214,180,143,1) 70%, rgba(201,155,105,1) 100%);
+    }
+    .container{
+      border: 1px solid #d6b48f;
+      border-radius: 6px;
+      padding: 25px;
+      background: linear-gradient(180deg, rgba(242,230,217,1) 25%, rgba(255,238,230,1) 75%);
+      box-shadow: 3px 3px 7px #c48e54;
+    }
+    h2{
+      text-align: center;
+      font-style: italic;
+    }
+    ul{
+      list-style: none;
+      line-height: 2;
+    }
+    i.fa-envelope{
+      color: #d6b48f;
+      margin-right: 5px;
+
+    }
+  </style>
 </head>
 <body>
   <div id="app">
-    <h2>Email list</h2>
-    <ul>
-      <li v-for="email in emails">{{email}}</li><!-- // La lista di email va stampata a schermo nella pagina html. -->
-    </ul>
-
-  </div>
+    <div class="container">
+      <h2>Email list</h2>
+      <ul>
+        <li v-for="email in emails">
+          <i class="fas fa-envelope"></i>
+          {{email}}
+        </li><!-- // La lista di email va stampata a schermo nella pagina html. -->
+      </ul>
+    </div><!-- /.container -->
+  </div><!-- /#app -->
 
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
